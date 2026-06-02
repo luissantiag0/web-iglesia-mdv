@@ -1,0 +1,6 @@
+{
+  "name": "Mensaje de Vida",
+  "description": "Sitio web oficial de la iglesia evangélica Mensaje de Vida. Comunidad, fe, esperanza y excelencia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
