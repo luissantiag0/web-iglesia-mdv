@@ -69,6 +69,15 @@ export default function Meetings() {
           </div>
         </div>
 
+        {/* Temporary warning for unofficial locations */}
+        {(selectedLocation === 'Terrassa' || selectedLocation === 'Rubí') && (
+          <div className="max-w-3xl mx-auto mb-10 p-4 bg-red-600/10 border-2 border-red-600 rounded-xl text-center">
+            <p className="text-sm font-bold text-red-600 uppercase tracking-widest">
+              ⚠ AÚN NO TERMINADO — Información no oficial, en desarrollo
+            </p>
+          </div>
+        )}
+
         {/* Meetings Grid Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[300px]">
           <AnimatePresence mode="wait">

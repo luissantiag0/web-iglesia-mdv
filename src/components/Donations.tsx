@@ -59,6 +59,13 @@ export default function Donations() {
           <div className="h-1 w-20 bg-red-600 mx-auto mt-4 rounded-full" />
         </div>
 
+        {/* Provisional warning */}
+        <div className="max-w-3xl mx-auto mb-12 p-4 bg-red-600/10 border-2 border-red-600 rounded-xl text-center">
+          <p className="text-sm font-bold text-red-600 uppercase tracking-widest">
+            ⚠ AÚN NO TERMINADO — Contenido provisional, no oficial
+          </p>
+        </div>
+
         {/* Major Split Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
