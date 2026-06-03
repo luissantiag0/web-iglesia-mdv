@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Play, Calendar, User, BookOpen, VolumeX, Volume2 } from 'lucide-react';
+import { Play, Calendar, User } from 'lucide-react';
 import { SERMONS } from '../data';
 import type { Sermon } from '../types';
 
@@ -23,7 +23,7 @@ export default function Sermons() {
             Últimas Predicaciones
           </p>
           <p className="mt-4 text-gray-400 text-lg font-light">
-            Alimenta tu fe escuchando y repasando las exposiciones bíblicas dominicales en formato de video y audio.
+            Alimenta tu fe escuchando y profundizando en las exposiciones bíblicas de cada semana en video y audio.
           </p>
           <div className="h-1 w-20 bg-red-600 mx-auto mt-4 rounded-full" />
         </div>
@@ -50,21 +50,15 @@ export default function Sermons() {
                   {/* Backdrop simulated thumbnail image */}
                   <div className="absolute inset-0 bg-neutral-900/40 group-hover:bg-neutral-900/30 transition-colors z-0" />
                   <img
-                    src={`https://img.youtube.com/vi/${selectedSermon.youtubeId}/maxresdefault.jpg`}
+                    src={`https://img.youtube.com/vi/${selectedSermon.youtubeId}/hqdefault.jpg`}
                     alt={selectedSermon.title}
                     className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay z-0"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
-                      // Fallback if maxresdefault doesn't exist for the specific ID
-                      (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${selectedSermon.youtubeId}/hqdefault.jpg`;
+                      (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${selectedSermon.youtubeId}/mqdefault.jpg`;
                     }}
                   />
                   
-                  {/* Category overlay */}
-                  <span className="relative z-10 self-start text-xs font-semibold px-3 py-1 bg-red-600 rounded-full">
-                    {selectedSermon.category}
-                  </span>
-
                   {/* Centered Play Trigger Button */}
                   <button
                     onClick={() => setIsPlaying(true)}
@@ -94,10 +88,6 @@ export default function Sermons() {
               )}
             </div>
             
-            <p className="text-sm text-gray-400 font-light flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-red-500" />
-              <span>Puedes conectarte a nuestro canal de YouTube oficial para ver el registro histórico de todas nuestras series pasadas.</span>
-            </p>
           </div>
 
           {/* Catalog Selection List Right (5cols) */}
@@ -107,7 +97,7 @@ export default function Sermons() {
             </span>
             
             <div className="space-y-3">
-              {SERMONS.map((sermon) => {
+              {SERMONS.slice(1).map((sermon) => {
                 const isActive = sermon.id === selectedSermon.id;
                 return (
                   <button
@@ -129,6 +119,9 @@ export default function Sermons() {
                         alt={sermon.title}
                         className="w-full h-full object-cover opacity-60"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${sermon.youtubeId}/mqdefault.jpg`;
+                        }}
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/40">
                         <Play className={`h-4 w-4 ${isActive ? 'text-red-500 fill-current' : 'text-white'}`} />
@@ -137,9 +130,6 @@ export default function Sermons() {
 
                     {/* Meta labels */}
                     <div className="flex-1 min-w-0">
-                      <span className="block text-[10px] uppercase font-bold tracking-wider text-red-500 font-mono">
-                        {sermon.category}
-                      </span>
                       <h4 className="font-bold text-sm text-white truncate mt-1">
                         {sermon.title}
                       </h4>
@@ -154,7 +144,7 @@ export default function Sermons() {
 
             <div className="pt-4">
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@iglesiamensajedevida"
                 target="_blank"
                 rel="noreferrer"
                 className="block text-center w-full py-3 bg-red-600/10 hover:bg-red-600/20 border border-red-500/20 text-red-400 hover:text-red-300 font-bold text-sm tracking-wide rounded-xl transition-all duration-300"

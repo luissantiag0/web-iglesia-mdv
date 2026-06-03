@@ -4,7 +4,6 @@ export interface Sermon {
   preacher: string;
   date: string;
   youtubeId: string;
-  category: string;
 }
 
 export interface ChurchEvent {

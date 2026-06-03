@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Church, HeartHandshake, Users, Home, Clock, CalendarDays, MapPin } from 'lucide-react';
-import { MEETINGS, CHURCH_INFO } from '../data';
+import { Church, HeartHandshake, Users, Home, RefreshCw, Clock, CalendarDays, MapPin } from 'lucide-react';
+import { MEETINGS, LOCATIONS, CHURCH_INFO } from '../data';
 import type { Meeting } from '../types';
 
-const LOCATIONS = ['Badalona', 'Terrassa', 'Rubí'];
+const LOCATION_NAMES = ['Badalona', 'Terrassa', 'Rubí'];
 
 export default function Meetings() {
   const [selectedLocation, setSelectedLocation] = useState('Badalona');
@@ -14,6 +14,7 @@ export default function Meetings() {
     HeartHandshake: HeartHandshake,
     Users: Users,
     Home: Home,
+    RefreshCw: RefreshCw,
   };
 
   const filteredMeetings = MEETINGS.filter((m) => m.location === selectedLocation);
@@ -42,7 +43,7 @@ export default function Meetings() {
         {/* Location Tabs */}
         <div className="flex items-center justify-center gap-1 mb-12">
           <div className="inline-flex items-center bg-card border border-surface rounded-xl p-1 shadow-sm">
-            {LOCATIONS.map((loc) => (
+            {LOCATION_NAMES.map((loc) => (
               <button
                 key={loc}
                 onClick={() => setSelectedLocation(loc)}
@@ -81,32 +82,33 @@ export default function Meetings() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3, delay: idx * 0.05 }}
-                    className="group bg-card hover:bg-neutral-900 hover:text-white border border-surface hover:border-neutral-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between"
+                    className="group relative bg-card border border-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col"
                   >
-                    <div>
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="p-4 bg-red-600/10 group-hover:bg-red-600 text-red-600 group-hover:text-white rounded-xl transition-all duration-300">
-                          <IconComponent className="h-6 w-6" />
+                    <div className="h-1.5 bg-gradient-to-r from-red-600 to-red-400" />
+                    <div className="p-6 flex flex-col flex-1">
+                      <div className="flex items-start justify-between mb-5">
+                        <div className="relative">
+                          <div className="absolute -inset-1 bg-red-600/10 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          <div className="relative p-3 bg-red-600/10 group-hover:bg-red-600 text-red-600 group-hover:text-white rounded-xl transition-all duration-300">
+                            <IconComponent className="h-5 w-5" />
+                          </div>
                         </div>
-                        <span className="text-xs font-mono font-bold tracking-widest text-red-600 uppercase bg-red-600/15 px-3 py-1 rounded-full group-hover:bg-white/10 group-hover:text-red-400">
+                        <span className="text-[11px] font-bold tracking-widest text-red-600 uppercase bg-red-600/10 px-3 py-1.5 rounded-full shrink-0">
                           {meeting.day}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold tracking-tight text-main group-hover:text-white transition-colors mb-2">
+
+                      <h3 className="text-lg font-extrabold text-main mb-3">
                         {meeting.name}
                       </h3>
-                      <p className="text-sm text-secondary group-hover:text-gray-300 transition-colors leading-relaxed mb-6 font-light">
+
+                      <p className="text-sm text-muted leading-relaxed flex-1 whitespace-pre-line">
                         {meeting.description}
                       </p>
-                    </div>
-                    <div className="pt-4 border-t border-surface-light group-hover:border-white/10 flex items-center justify-between text-xs font-semibold tracking-wider text-muted group-hover:text-gray-400">
-                      <div className="flex items-center space-x-2">
-                        <CalendarDays className="h-4 w-4 text-red-600 group-hover:text-red-400" />
-                        <span>Cada {meeting.day}</span>
-                      </div>
-                      <div className="flex items-center space-x-2 bg-card-alt group-hover:bg-white/5 py-1 px-3 rounded-md">
-                        <Clock className="h-4 w-4 text-red-600 group-hover:text-red-400" />
-                        <span>{meeting.time} hs</span>
+
+                      <div className="pt-4 mt-5 border-t border-surface flex items-center gap-2 text-xs font-semibold tracking-wider text-muted">
+                        <Clock className="h-3.5 w-3.5 text-red-600" />
+                        <span>{meeting.time}</span>
                       </div>
                     </div>
                   </motion.div>
@@ -125,25 +127,28 @@ export default function Meetings() {
         </div>
 
         {/* Direct Location Callout */}
-        <div className="mt-16 text-center select-none bg-neutral-900 text-white p-8 rounded-2xl max-w-4xl mx-auto shadow-lg border border-white/5">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <div className="text-left">
-              <span className="text-xs font-bold text-red-500 uppercase tracking-widest">¿Es tu primera vez visitándonos?</span>
-              <p className="text-lg font-bold mt-1">Nuestra dirección principal es:</p>
-              <p className="text-sm text-gray-300">{CHURCH_INFO.address}.</p>
-            </div>
-            <button
-              onClick={() => {
-                const element = document.getElementById('contacto');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-sm font-bold tracking-wide uppercase rounded-lg shadow-md hover:scale-105 transition-all duration-200 cursor-pointer"
-            >
-              Ver mapa y contacto
-            </button>
+        <div className="mt-16 text-center bg-neutral-900 text-white p-8 rounded-2xl max-w-4xl mx-auto shadow-lg border border-white/5">
+          <span className="text-xs font-bold text-red-500 uppercase tracking-widest">¿Es tu primera vez visitándonos?</span>
+          <p className="text-lg font-bold mt-3 mb-5">Encuéntranos en nuestras sedes:</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+            {LOCATIONS.map((loc) => (
+              <div key={loc.name} className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <p className="text-sm font-bold text-red-400">{loc.name}</p>
+                <p className="text-xs text-gray-300 mt-1 leading-relaxed">{loc.address}</p>
+              </div>
+            ))}
           </div>
+          <button
+            onClick={() => {
+              const element = document.getElementById('contacto');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="mt-6 px-6 py-3 bg-red-600 hover:bg-red-700 text-white text-sm font-bold tracking-wide uppercase rounded-lg shadow-md hover:scale-105 transition-all duration-200 cursor-pointer"
+          >
+            Ver mapa y contacto
+          </button>
         </div>
 
       </div>

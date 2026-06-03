@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Shield, Heart, Sun, Moon } from 'lucide-react';
 import { INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, CHURCH_INFO } from '../data';
-import mdvLogo from '../assets/images/logomdv.jpg';
+import mdvLogo from '../assets/images/logomdv.png';
 
 interface HeaderProps {
   activeSection: string;
@@ -71,14 +71,14 @@ export default function Header({ activeSection, theme = 'dark', onToggleTheme }:
             className="flex items-center space-x-3 group cursor-pointer text-left"
             id="logo-brand-btn"
           >
-            <div>
+            <div className="flex items-center justify-center">
               <img
                 src={mdvLogo}
                 alt="Logo Mensaje de Vida"
                 className="h-10 w-10 object-contain select-none pointer-events-none"
               />
             </div>
-            <div>
+            <div className="flex flex-col justify-center">
               <span className={`block text-xl font-bold tracking-tight font-sans transition-colors ${
                 isScrolled
                   ? theme === 'dark'

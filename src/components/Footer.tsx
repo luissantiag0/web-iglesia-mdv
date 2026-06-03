@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Youtube, Heart } from 'lucide-react';
-import { CHURCH_INFO, INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, TIKTOK_URL } from '../data';
-import mdvLogo from '../assets/images/logomdv.jpg';
+import { CHURCH_INFO, LOCATIONS, INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, TIKTOK_URL } from '../data';
+import mdvLogo from '../assets/images/logomdv.png';
 
 function TiktokIcon({ className }: { className?: string }) {
   return (
@@ -52,12 +52,11 @@ export default function Footer() {
               onClick={() => handleScrollTo('inicio')}
               className="flex items-center space-x-3 text-left cursor-pointer group"
             >
-              <div className="relative p-0.5 rounded-full overflow-hidden ring-2 ring-red-600/50 shadow-lg shadow-red-600/10">
+              <div>
                 <img
                   src={mdvLogo}
                   alt="Logo Mensaje de Vida"
-                  className="h-9 w-9 object-cover select-none pointer-events-none"
-                  referrerPolicy="no-referrer"
+                  className="h-9 w-9 object-contain select-none pointer-events-none"
                 />
               </div>
               <div>
@@ -145,9 +144,13 @@ export default function Footer() {
               <button onClick={() => handleScrollTo('contacto')} className="text-left hover:text-red-500 transition-colors cursor-pointer">
                 Formulario de Contacto
               </button>
-              <span className="text-xs text-gray-500 block pt-1 hover:text-red-500 transition-colors">
-                Dirección: {CHURCH_INFO.address}
-              </span>
+              <div className="pt-2 space-y-1.5 border-t border-white/5">
+                {LOCATIONS.map((loc) => (
+                  <p key={loc.name} className="text-xs text-gray-500">
+                    <span className="text-gray-400">{loc.name}:</span> {loc.address}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
 

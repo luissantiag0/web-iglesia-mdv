@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertTriangle, MessageSquare } from 'lucide-react';
-import { CHURCH_INFO, INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, WHATSAPP_URL } from '../data';
+import { CHURCH_INFO, LOCATIONS, INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, WHATSAPP_URL } from '../data';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -70,17 +70,19 @@ export default function Contact() {
             
             {/* Direct details cards group */}
             <div className="bg-card border border-surface p-8 rounded-2xl space-y-6 shadow-sm">
-              <h3 className="text-xl font-bold tracking-tight text-main mb-4">Información de Contacto</h3>
-              
-              <div className="flex items-start">
-                <div className="p-3 bg-red-600/10 rounded-xl text-red-600 mr-4">
-                  <MapPin className="h-5 w-5" />
+              <h3 className="text-xl font-bold tracking-tight text-main mb-6">Nuestras Sedes</h3>
+
+              {LOCATIONS.map((loc) => (
+                <div key={loc.name} className="flex items-start">
+                  <div className="p-3 bg-red-600/10 rounded-xl text-red-600 mr-4 shrink-0">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm text-secondary uppercase tracking-widest">{loc.name}</h4>
+                    <p className="text-main font-medium text-base mt-1">{loc.address}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-sm text-secondary uppercase tracking-widest">Nuestra Dirección</h4>
-                  <p className="text-main font-medium text-base mt-1">{CHURCH_INFO.address}</p>
-                </div>
-              </div>
+              ))}
 
               <div className="flex items-start">
                 <div className="p-3 bg-red-600/10 rounded-xl text-red-600 mr-4">
@@ -106,7 +108,7 @@ export default function Contact() {
             {/* Google Map block wrapper container */}
             <div className="relative overflow-hidden rounded-2xl border border-surface shadow-sm grow min-h-[250px] bg-neutral-200">
               <iframe
-                src={CHURCH_INFO.mapsEmbed}
+                src={LOCATIONS[0].mapsEmbed}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

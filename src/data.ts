@@ -3,7 +3,7 @@ import type { Sermon, ChurchEvent, Meeting } from './types';
 // Import newly generated images
 import heroImage from './assets/images/foto-arde.jpeg';
 import communityImage from './assets/images/quienes-somos.jpeg';
-import moisesImg from './assets/images/pastor-moises-segura.png';
+import moisesImg from './assets/images/pastorpmoises-segura.png';
 import daniImg from './assets/images/pastor-dani-gines.png';
 import abelImg from './assets/images/pastor-abel-gines.png';
 import visionImage from './assets/images/foto-vision.jpeg';
@@ -31,14 +31,36 @@ export const CHURCH_INFO = {
   slogan: "Un lugar para pertenecer, crecer y servir",
   foundedYear: "1998",
   affiliation: "Miembro de las Asambleas de Dios de España (FADE)",
-  address: "Carrer de la Mina, 9, 08913 Santa Coloma de Gramenet, Barcelona",
+  address: "Carrer de la Mina, 9, 08913 Badalona, Barcelona",
   phone: "+34 93 123 45 67",
   email: "contacto@mensajedevida.org",
-  mapsEmbed: "https://maps.google.com/maps?q=Carrer%20de%20la%20Mina%2C%209%2C%2008913%20Santa%20Coloma%20de%20Gramenet%20Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed",
+  mapsEmbed: "https://maps.google.com/maps?q=Carrer%20de%20la%20Mina%2C%209%2C%2008913%20Badalona%20Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed",
 };
 
+export const LOCATIONS = [
+  {
+    name: "Badalona (Principal)",
+    address: "Carrer de la Mina, 9, 08913 Badalona, Barcelona",
+    mapsEmbed: "https://maps.google.com/maps?q=Carrer%20de%20la%20Mina%2C%209%2C%2008913%20Badalona%20Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed",
+  },
+  {
+    name: "Rubí",
+    address: "Passeig dels Pins, 3, 08191 Rubí, Barcelona",
+  },
+  {
+    name: "Terrassa",
+    address: "Carrer de Huelva, 208226, 08226 Terrassa, Barcelona",
+  },
+];
+
 export const WE_ARE = {
-  history: "Nuestra iglesia, Mensaje de Vida, comenzó con un pequeño grupo de creyentes apasionados que compartían el mismo deseo: ser un faro de esperanza y luz para nuestra ciudad. Confiando plenamente en el mover del Espíritu Santo, celebramos nuestras primeras reuniones en un pequeño local. A lo largo de los años, hemos visto la increíble fidelidad del Señor añadiendo a aquellos que han sido transformados por Su gracia. Hoy nos erigimos como una comunidad vibrante de fe, amor fraternal y firme compromiso con las Sagradas Escrituras.",
+  history: `Mensaje de Vida Sobre las Naciones nació hace más de 36 años con un pequeño grupo de creyentes que compartían una misma visión: ser luz para este mundo y llevar el mensaje de Jesucristo a toda persona.
+
+"Vosotros sois la luz del mundo; una ciudad asentada sobre un monte no se puede esconder." (Mateo 5:14)
+
+Confiando plenamente en Dios, comencemos predicando el Evangelio, evangelizando y celebrando cultos en un pequeño local. Con el paso de los años, hemos visto la fidelidad del Señor transformando vidas y añadiendo a aquellos que desean seguirle.
+
+Hoy contamos con iglesias en Badalona, Rubí y Terrassa, además de una nueva obra en El Prat de Llobregat. Seguimos avanzando con el mismo propósito que nos vio nacer: anunciar a Cristo, servir a las personas y extender el Reino de Dios.`,
   values: [
     {
       title: "Identidad Bíblica",
@@ -111,21 +133,12 @@ export const MEETINGS: Meeting[] = [
     location: "Badalona"
   },
   {
-    id: "badalona-matrimonios-mujeres",
-    name: "Matrimonios y Mujeres",
+    id: "badalona-miercoles-rotativo",
+    name: "Grupos de Adultos",
     day: "Miércoles",
     time: "18:30",
-    description: "Espacios dedicados para fortalecer matrimonios y encuentro de mujeres, creciendo juntos en fe y comunión.",
-    icon: "HeartHandshake",
-    location: "Badalona"
-  },
-  {
-    id: "badalona-hombres",
-    name: "Hombres",
-    day: "Miércoles",
-    time: "19:30",
-    description: "Reunión de varones para compartir, orar y edificarnos mutuamente en nuestro caminar con Dios.",
-    icon: "Users",
+    description: "Reuniones mensuales en sistema rotativo:\n\n● 1er miércoles — Matrimonios\n● 2do miércoles — Hombres\n● 3er miércoles — Mujeres\n● 4to miércoles — Matrimonios (sigue el ciclo)\n\nCada grupo se reúne una vez al mes.",
+    icon: "RefreshCw",
     location: "Badalona"
   },
   {
@@ -133,25 +146,16 @@ export const MEETINGS: Meeting[] = [
     name: "Culto General",
     day: "Jueves",
     time: "19:30",
-    description: "Noche de alabanza, adoración y palabra. Un encuentro especial para buscar juntos la presencia de Dios.",
+    description: "Tarde de alabanza, adoración y palabra. Un encuentro especial para buscar juntos la presencia de Dios.",
     icon: "Church",
     location: "Badalona"
   },
   {
-    id: "badalona-infantil",
-    name: "Ministerio Infantil y Prejuvenil",
+    id: "badalona-viernes",
+    name: "Encuentros Generacionales",
     day: "Viernes",
-    time: "17:30",
-    description: "PG (Pequeños Gigantes) de 6 a 8 años, NG (New Generation) de 9 a 12 años y +QP (Más que Pasión) de 12 a 16 años.",
-    icon: "Users",
-    location: "Badalona"
-  },
-  {
-    id: "badalona-jovenes",
-    name: "Jóvenes",
-    day: "Viernes",
-    time: "19:30",
-    description: "Reunión de jóvenes de 16 a 30 años con música, palabra y ambiente de amistad y propósito.",
+    time: "17:30 | 19:30",
+    description: "Reuniones para todas las edades:\n\nInfantil y Prejuvenil — 17:30 hs\nJóvenes — 19:30 hs\n\nTodos nos reunimos el mismo día, con horarios según el grupo.",
     icon: "Users",
     location: "Badalona"
   },
@@ -246,28 +250,32 @@ export const EVENTS: ChurchEvent[] = [
 export const SERMONS: Sermon[] = [
   {
     id: "sermon-1",
-    title: "El Poder de una Vida Rendida al Espíritu",
-    preacher: "Pr. Juan Carlos Martínez",
-    date: "31 Mayo, 2026",
-    youtubeId: "vB0X_QZ7jSw", // Hillsong / Inspiring worship alternative live clip
-    category: "Serie: Profundidad"
+    title: "Late en el corazón de Dios",
+    preacher: "Pr. Moisés Segura",
+    date: "10 may 2026",
+    youtubeId: "mBlI-oJnwH4",
   },
   {
     id: "sermon-2",
-    title: "Caminando Firme en Medio del Silencio de Dios",
-    preacher: "Pra. Elena Martínez",
-    date: "24 Mayo, 2026",
-    youtubeId: "9Wd_9lskmOM", // Contemporary spanish christian sermon / teaching placeholder
-    category: "Serie: Confianza"
+    title: "Jesús, Mikve y el ciego",
+    preacher: "Romero Moreno",
+    date: "28 may 2026",
+    youtubeId: "i2SCV9B22Rs",
   },
   {
     id: "sermon-3",
-    title: "Generación de Relevo: Viviendo Sin Disculpas",
-    preacher: "Samuel Silva",
-    date: "17 Mayo, 2026",
-    youtubeId: "V_CymjXpY1k", // Youth service worship video
-    category: "Sábado de Impacto"
-  }
+    title: "Los Iluminados",
+    preacher: "Barti Moreno",
+    date: "21 may 2026",
+    youtubeId: "WYhwvmB3Exs",
+  },
+  {
+    id: "sermon-4",
+    title: "Cómo afrontar las malas noticias",
+    preacher: "Fernando Amaya",
+    date: "19 may 2026",
+    youtubeId: "ku3rmIaKfg4",
+  },
 ];
 
 export const DONATIONS = {

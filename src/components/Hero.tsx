@@ -29,7 +29,7 @@ export default function Hero() {
         <img
           src={IMAGES.hero}
           alt="Adoración Mensaje de Vida"
-          className="w-full h-full object-cover opacity-70 scale-105"
+          className="w-full h-full object-cover opacity-80 scale-105 brightness-110 contrast-110 saturate-110"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/70 via-neutral-950/30 to-neutral-950/80" />
@@ -59,17 +59,25 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed">
-            Existimos porque tenemos propósito: para compartir el evangelio y extender el mensaje de vida a cada rincón de nuestra sociedad con pasión, amor y restoration.
+            Existimos porque tenemos propósito: para compartir el evangelio y extender el mensaje de vida a cada rincón de nuestra sociedad con pasión y amor.
           </p>
 
           {/* Featured Bible Verse Card */}
           <div className="max-w-xl mx-auto bg-neutral-900/40 border border-white/10 p-5 rounded-2xl shadow-2xl backdrop-blur-md mt-6">
             <p className="text-sm italic text-gray-200">
-              "Pero los que esperan en Jehová tendrán nuevas fuerzas; levantarán alas como las águilas; correrán, y no se cansarán; caminarán, y no se fatigarán."
+              "Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo."
             </p>
             <span className="block mt-2.5 text-[10px] font-bold text-red-500 tracking-widest uppercase font-mono">
-              — Isaías 40:31
+              — Mateo 28:19
             </span>
+            <div className="mt-3 pt-3 border-t border-white/10">
+              <p className="text-xs text-gray-400 font-medium">
+                <span className="text-red-400 font-bold">Cada persona un creyente,</span> cada creyente un discípulo con propósito
+              </p>
+              <span className="block mt-1 text-[9px] text-gray-500 tracking-widest uppercase font-mono">
+                2 Timoteo 2:2
+              </span>
+            </div>
           </div>
 
           {/* Action CTAs Callouts */}
