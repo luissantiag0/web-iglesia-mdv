@@ -1,5 +1,5 @@
-import { Facebook, Instagram, Youtube, Heart } from 'lucide-react';
-import { CHURCH_INFO, LOCATIONS, INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, TIKTOK_URL } from '../data';
+import { Instagram, Youtube, Heart } from 'lucide-react';
+import { CHURCH_INFO, LOCATIONS, INSTAGRAM_URL, YOUTUBE_URL, TIKTOK_URL } from '../data';
 import mdvLogo from '../assets/images/logomdv.png';
 
 function TiktokIcon({ className }: { className?: string }) {
@@ -73,15 +73,6 @@ export default function Footer() {
             </p>
             {/* Social media connections */}
             <div className="flex items-center space-x-4 pt-4">
-              <a
-                href={FACEBOOK_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 bg-neutral-900 hover:bg-red-600 hover:text-white rounded-lg transition-all duration-200"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-4 w-4" />
-              </a>
               <a
                 href={INSTAGRAM_URL}
                 target="_blank"

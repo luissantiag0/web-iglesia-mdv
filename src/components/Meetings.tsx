@@ -4,7 +4,7 @@ import { Church, HeartHandshake, Users, Home, RefreshCw, Clock, CalendarDays, Ma
 import { MEETINGS, LOCATIONS, CHURCH_INFO } from '../data';
 import type { Meeting } from '../types';
 
-const LOCATION_NAMES = ['Badalona', 'Terrassa', 'Rubí'];
+const LOCATION_NAMES = ['Badalona', 'Terrassa', 'Rubí', 'El Prat'];
 
 export default function Meetings() {
   const [selectedLocation, setSelectedLocation] = useState('Badalona');

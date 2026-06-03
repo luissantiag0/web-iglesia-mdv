@@ -13,7 +13,6 @@ import Vision from './components/Vision';
 import Meetings from './components/Meetings';
 import Events from './components/Events';
 import Sermons from './components/Sermons';
-import Devotional from './components/Devotional';
 import Donations from './components/Donations';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -64,7 +63,6 @@ export default function App() {
         'reuniones',
         'eventos',
         'predicaciones',
-        'devocional',
         'donaciones',
         'contacto',
       ];
@@ -121,9 +119,6 @@ export default function App() {
         {/* 6. Últimas Predicaciones */}
         <Sermons />
 
-        {/* 6.5. Devocional Diario */}
-        <Devotional theme={theme} />
-
         {/* 7. Donaciones */}
         <Donations />
 
@@ -152,7 +147,7 @@ export default function App() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noreferrer"
-          className="bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group focus:outline-none"
+          className="bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-2xl shadow-green-600/30 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group focus:outline-none hover:shadow-green-500/50"
           aria-label="Contactar por WhatsApp"
         >
           <MessageSquare className="h-6 w-6 fill-current" />

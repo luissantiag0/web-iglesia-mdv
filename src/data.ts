@@ -20,10 +20,9 @@ export const IMAGES = {
   eventFamily: eventFamilyImage,
 };
 
-export const INSTAGRAM_URL = "https://instagram.com";
-export const FACEBOOK_URL = "https://facebook.com";
-export const YOUTUBE_URL = "https://youtube.com";
-export const TIKTOK_URL = "https://www.tiktok.com";
+export const INSTAGRAM_URL = "https://instagram.com/mensajedevidabadalona";
+export const YOUTUBE_URL = "https://www.youtube.com/@iglesiamensajedevida";
+export const TIKTOK_URL = "https://tiktok.com/@iglesiamensajedevida";
 export const WHATSAPP_URL = "https://wa.me/34600000000?text=Hola%20Mensaje%20de%20Vida%2C%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20con%20vosotros.";
 
 export const CHURCH_INFO = {
@@ -33,7 +32,7 @@ export const CHURCH_INFO = {
   affiliation: "Miembro de las Asambleas de Dios de España (FADE)",
   address: "Carrer de la Mina, 9, 08913 Badalona, Barcelona",
   phone: "+34 93 123 45 67",
-  email: "contacto@mensajedevida.org",
+  email: "mdvmensajedevida@gmail.com",
   mapsEmbed: "https://maps.google.com/maps?q=Carrer%20de%20la%20Mina%2C%209%2C%2008913%20Badalona%20Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed",
 };
 
@@ -51,12 +50,14 @@ export const LOCATIONS = [
     name: "Terrassa",
     address: "Carrer de Huelva, 208226, 08226 Terrassa, Barcelona",
   },
+  {
+    name: "El Prat",
+    address: "En el GISC de San Cosme (provisional junio)",
+  },
 ];
 
 export const WE_ARE = {
   history: `Mensaje de Vida Sobre las Naciones nació hace más de 36 años con un pequeño grupo de creyentes que compartían una misma visión: ser luz para este mundo y llevar el mensaje de Jesucristo a toda persona.
-
-"Vosotros sois la luz del mundo; una ciudad asentada sobre un monte no se puede esconder." (Mateo 5:14)
 
 Confiando plenamente en Dios, comencemos predicando el Evangelio, evangelizando y celebrando cultos en un pequeño local. Con el paso de los años, hemos visto la fidelidad del Señor transformando vidas y añadiendo a aquellos que desean seguirle.
 
@@ -223,6 +224,24 @@ export const MEETINGS: Meeting[] = [
     description: "Nos congregamos para orar, interceder y buscar el rostro de Dios como comunidad.",
     icon: "HeartHandshake",
     location: "Rubí"
+  },
+  {
+    id: "elprat-lunes",
+    name: "Culto General",
+    day: "Lunes",
+    time: "19:00",
+    description: "Celebración semanal con adoración, palabra y comunión para toda la familia en El Prat.",
+    icon: "Church",
+    location: "El Prat"
+  },
+  {
+    id: "elprat-miercoles",
+    name: "Culto General",
+    day: "Miércoles",
+    time: "19:00",
+    description: "Reunión de mitad de semana con enseñanza bíblica y tiempo de oración en El Prat.",
+    icon: "Church",
+    location: "El Prat"
   }
 ];
 
@@ -295,7 +314,7 @@ export const DONATIONS = {
     },
     {
       title: "Ofrenda Presencial",
-      details: "Puedes ofrendar mediante los buzones de ofrenda y datafonos habilitados en la entrada de nuestro auditorio principal.",
+      details: "Puedes ofrendar mediante las ofrendas o los sobres disponibles en la entrada de nuestro culto.",
       highlight: "Durante nuestros cultos semanales"
     }
   ]

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2, AlertTriangle, MessageSquare } from 'lucide-react';
-import { CHURCH_INFO, LOCATIONS, INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, WHATSAPP_URL } from '../data';
+import { CHURCH_INFO, LOCATIONS, INSTAGRAM_URL, YOUTUBE_URL, WHATSAPP_URL } from '../data';
 
 export default function Contact() {
   const [formData, setFormData] = useState({

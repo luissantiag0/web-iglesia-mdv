@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Shield, Heart, Sun, Moon } from 'lucide-react';
-import { INSTAGRAM_URL, FACEBOOK_URL, YOUTUBE_URL, CHURCH_INFO } from '../data';
+import { INSTAGRAM_URL, YOUTUBE_URL, CHURCH_INFO } from '../data';
 import mdvLogo from '../assets/images/logomdv.png';
 
 interface HeaderProps {

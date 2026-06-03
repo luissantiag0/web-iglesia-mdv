@@ -3,10 +3,10 @@ import { WE_ARE, IMAGES } from '../data';
 
 export default function AboutUs() {
   const valueIcons = [
-    <ShieldCheck key="icon-0" className="h-6 w-6 text-red-600" />,
-    <HeartPulse key="icon-1" className="h-6 w-6 text-red-600" />,
-    <Sparkles key="icon-2" className="h-6 w-6 text-red-600" />,
-    <Footprints key="icon-3" className="h-6 w-6 text-red-600" />,
+    <ShieldCheck key="icon-0" className="h-6 w-6" />,
+    <HeartPulse key="icon-1" className="h-6 w-6" />,
+    <Sparkles key="icon-2" className="h-6 w-6" />,
+    <Footprints key="icon-3" className="h-6 w-6" />,
   ];
 
   return (
@@ -79,7 +79,7 @@ export default function AboutUs() {
                 className="group p-6 bg-card-alt hover:bg-card border border-surface hover:border-red-600/30 rounded-xl transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col items-start gap-4 relative overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-20 h-20 bg-red-600/5 rounded-bl-full -mr-8 -mt-8 group-hover:bg-red-600/10 transition-all duration-300" />
-                <div className="p-3 bg-red-600/10 rounded-lg group-hover:bg-red-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-red-600/20 transition-all duration-300 shrink-0">
+                <div className="p-3 bg-red-600/10 rounded-lg text-red-600 group-hover:bg-red-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-red-600/20 transition-all duration-300 shrink-0">
                   {valueIcons[i]}
                 </div>
                 <div className="relative">
