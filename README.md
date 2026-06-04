@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# ✝️ Iglesia MDV — Sitio Web Oficial
+Iglesia MDV es una plataforma web moderna diseñada para representar digitalmente la identidad, visión y actividades de la congregación.
 
-# Run and deploy your AI Studio app
+El proyecto ofrece una experiencia clara y accesible para visitantes y miembros, facilitando el acceso a información sobre reuniones, ministerios, liderazgo, eventos y recursos de la iglesia desde cualquier dispositivo.
 
-This contains everything you need to run your app locally.
+# 🌐 Objetivos del proyecto
+- Modernizar la presencia digital de la iglesia.
+- Facilitar el acceso a información relevante para visitantes y miembros.
+- Presentar la visión, valores y ministerios de la congregación.
+- Centralizar recursos, predicaciones y medios de contacto.
+- Ofrecer una experiencia rápida, accesible y responsive.
 
-View your app in AI Studio: https://ai.studio/apps/dc49c7b2-ee50-4df0-be85-686c75681144
+# 🚀 Funcionalidades
+- Página principal con presentación de la iglesia.
+- Sección de visión, misión y valores.
+- Información sobre el equipo pastoral y liderazgo.
+- Presentación de ministerios y áreas de servicio.
+- Horarios de reuniones y actividades.
+- Integración de predicaciones y recursos multimedia.
+- Información de contacto y ubicación.
+- Accesos rápidos a redes sociales.
+- Diseño responsive para móviles, tablets y escritorio.
+- Animaciones e interacciones modernas.
 
-## Run Locally
+# 🛠️ Tecnologías utilizadas
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- Motion
+- Lucide React
+- Express
+- Dotenv
+- Google GenAI
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# ⚙️ Instalación
+- git clone https://github.com/tu-usuario/web-iglesia-mdv.git
+- cd web-iglesia-mdv
+- npm install
+- npm run dev
