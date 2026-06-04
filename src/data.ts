@@ -23,7 +23,7 @@ export const IMAGES = {
 export const INSTAGRAM_URL = "https://instagram.com/mensajedevidabadalona";
 export const YOUTUBE_URL = "https://www.youtube.com/@iglesiamensajedevida";
 export const TIKTOK_URL = "https://tiktok.com/@iglesiamensajedevida";
-export const WHATSAPP_URL = "https://wa.me/34600000000?text=Hola%20Mensaje%20de%20Vida%2C%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20con%20vosotros.";
+export const WHATSAPP_URL = "https://wa.me/34648743256?text=Hola%20Mensaje%20de%20Vida%2C%20me%20gustar%C3%ADa%20ponerme%20en%20contacto%20con%20vosotros.";
 
 export const CHURCH_INFO = {
   name: "Mensaje de Vida · Sobre las Naciones",
@@ -31,7 +31,7 @@ export const CHURCH_INFO = {
   foundedYear: "1998",
   affiliation: "Miembro de las Asambleas de Dios de España (FADE)",
   address: "Carrer de la Mina, 9, 08913 Badalona, Barcelona",
-  phone: "+34 93 123 45 67",
+  phone: "+34 648 74 32 56",
   email: "mdvmensajedevida@gmail.com",
   mapsEmbed: "https://maps.google.com/maps?q=Carrer%20de%20la%20Mina%2C%209%2C%2008913%20Badalona%20Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed",
 };

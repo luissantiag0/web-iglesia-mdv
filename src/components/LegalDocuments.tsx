@@ -105,8 +105,8 @@ function AvisoLegalText() {
         <li><strong>Domicilio Social:</strong> Carrer de la Mina, 9, 08913 Santa Coloma de Gramenet, Barcelona, España</li>
         <li><strong>Actividad / Fines:</strong> Entidad de carácter religioso sin ánimo de lucro dedicada al desarrollo y fomento de actividades de culto, formación espiritual y ayuda social comunitaria.</li>
         <li><strong>N.I.F. / Registro:</strong> Entidad debidamente inscrita en el Registro de Entidades Religiosas del Ministerio de la Presidencia, Relaciones con las Cortes y Memoria Democrática de España.</li>
-        <li><strong>Email de Contacto:</strong> contacto@mensajedevida.org</li>
-        <li><strong>Teléfono de Atención:</strong> +34 93 123 45 67</li>
+        <li><strong>Email de Contacto:</strong> mdvmensajedevida@gmail.com</li>
+        <li><strong>Teléfono de Atención:</strong> +34 648 74 32 56</li>
       </ul>
 
       <h3 className="text-xl font-bold text-white pt-4 mb-2">2. Términos y Condiciones de Uso</h3>
@@ -139,7 +139,7 @@ function PrivacidadText() {
       <ul className="list-disc pl-5 space-y-1">
         <li><strong>Responsable del tratamiento:</strong> Asociación Iglesia Evangélica Mensaje de Vida · Sobre las Naciones</li>
         <li><strong>Dirección:</strong> Carrer de la Mina, 9, 08913 Santa Coloma de Gramenet, Barcelona, España</li>
-        <li><strong>Contacto de Privacidad:</strong> privacidad@mensajedevida.org</li>
+        <li><strong>Contacto de Privacidad:</strong> mdvmensajedevida@gmail.com</li>
       </ul>
 
       <h3 className="text-xl font-bold text-white pt-4 mb-2">3. Finalidad del Tratamiento de Datos</h3>
@@ -159,7 +159,7 @@ function PrivacidadText() {
 
       <h3 className="text-xl font-bold text-white pt-4 mb-2">5. Derechos del Interesado</h3>
       <p>
-        Usted tiene pleno derecho a acceder, rectificar o cancelar el tratamiento de sus datos, así como a revocar sus consentimientos previos enviando una solicitud por escrito firmada adjuntando copia de su documento identificativo a: <strong>privacidad@mensajedevida.org</strong>, señalando claramente en el asunto "Derechos de Privacidad". Asimismo, tiene derecho a interponer una reclamación ante la Agencia Española de Protección de Datos (AEPD).
+        Usted tiene pleno derecho a acceder, rectificar o cancelar el tratamiento de sus datos, así como a revocar sus consentimientos previos enviando una solicitud por escrito firmada adjuntando copia de su documento identificativo a: <strong>mdvmensajedevida@gmail.com</strong>, señalando claramente en el asunto "Derechos de Privacidad". Asimismo, tiene derecho a interponer una reclamación ante la Agencia Española de Protección de Datos (AEPD).
       </p>
     </div>
   );
